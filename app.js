@@ -7,11 +7,51 @@ const areas = [
     careers: ["Administración", "Finanzas", "Mercadotecnia", "Negocios Internacionales"],
     pdfTagline: "Toma decisiones con datos, presenta mejor tus ideas y organiza proyectos con claridad.",
     aiTools: [
-      { name: "ChatGPT", use: "Lluvia de ideas, análisis, correos y resúmenes ejecutivos." },
-      { name: "Perplexity", use: "Búsqueda con fuentes para mercado, tendencias y competencia." },
-      { name: "Claude", use: "Redacción larga, reportes y síntesis de documentos." },
-      { name: "Power BI", use: "Tableros, métricas y visualización de datos." },
-      { name: "Notion AI", use: "Organización de proyectos, notas y seguimiento." },
+      {
+        name: "ChatGPT",
+        use: "Lluvia de ideas, análisis, correos y resúmenes ejecutivos.",
+        pdfDescription:
+          "Asistente conversacional para desarrollar ideas, aterrizar estrategias, estructurar presentaciones y convertir información dispersa en propuestas accionables.",
+        pdfUse:
+          "Úsalo para redactar correos profesionales, crear planes de negocio, resumir reuniones, preparar pitches y generar primeras versiones de reportes ejecutivos.",
+        url: "https://chatgpt.com/",
+      },
+      {
+        name: "Perplexity",
+        use: "Búsqueda con fuentes para mercado, tendencias y competencia.",
+        pdfDescription:
+          "Motor de respuesta con enfoque en investigación rápida que cita fuentes web y facilita contrastar información reciente sobre industrias, consumidores y competidores.",
+        pdfUse:
+          "Úsalo para validar tendencias, buscar benchmarks, investigar mercados, comparar competidores y respaldar tus decisiones con referencias verificables.",
+        url: "https://www.perplexity.ai/",
+      },
+      {
+        name: "Claude",
+        use: "Redacción larga, reportes y síntesis de documentos.",
+        pdfDescription:
+          "Herramienta orientada a trabajar con textos extensos, ideal para revisar documentos, resumir información compleja y reorganizar contenido con claridad.",
+        pdfUse:
+          "Úsalo para sintetizar reportes financieros, reescribir propuestas, organizar documentos largos y producir versiones ejecutivas más claras y ordenadas.",
+        url: "https://claude.ai/",
+      },
+      {
+        name: "Power BI",
+        use: "Tableros, métricas y visualización de datos.",
+        pdfDescription:
+          "Plataforma de analítica y visualización que transforma datos en dashboards útiles para seguimiento de indicadores, toma de decisiones y comunicación de resultados.",
+        pdfUse:
+          "Úsalo para construir tableros de ventas, monitorear KPIs, cruzar bases de datos y presentar métricas de negocio de forma visual y comprensible.",
+        url: "https://www.microsoft.com/power-platform/products/power-bi",
+      },
+      {
+        name: "Notion AI",
+        use: "Organización de proyectos, notas y seguimiento.",
+        pdfDescription:
+          "Espacio de trabajo con funciones de IA para ordenar información, generar contenido, resumir notas y mantener proyectos colaborativos bien documentados.",
+        pdfUse:
+          "Úsalo para crear agendas, documentar avances, resumir clases o juntas y mantener un seguimiento claro de tareas, entregables y responsables.",
+        url: "https://www.notion.so/product/ai",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Redacción, análisis y brainstorming." },
@@ -24,6 +64,9 @@ const areas = [
       "Pide contexto, objetivo y formato de salida.",
       "Incluye audiencia, tono y duración esperada.",
       "Solicita 3 opciones para comparar y elegir mejor.",
+      "Define que informacion no debe inventar y que datos debe validar.",
+      "Pide una version breve y otra detallada para decidir cual usar.",
+      "Solicita ejemplos aplicados a tu caso real antes de cerrar la respuesta.",
     ],
   },
   {
@@ -34,11 +77,51 @@ const areas = [
     careers: ["Ingeniería Industrial", "Sistemas", "Biotecnología", "Física"],
     pdfTagline: "Convierte conceptos complejos en explicaciones, cálculos y prototipos más rápidos.",
     aiTools: [
-      { name: "ChatGPT", use: "Explicaciones, fórmulas, lógica y apoyo en código." },
-      { name: "Wolfram Alpha", use: "Cálculo, álgebra y verificación de resultados." },
-      { name: "GitHub Copilot", use: "Programación asistida y limpieza de código." },
-      { name: "Notion AI", use: "Documentación y organización de proyectos." },
-      { name: "Perplexity", use: "Consulta de fuentes técnicas y referencias." },
+      {
+        name: "ChatGPT",
+        use: "Explicaciones, fórmulas, lógica y apoyo en código.",
+        pdfDescription:
+          "Asistente útil para traducir teoría compleja a explicaciones más claras, revisar enfoques de solución y acompañar procesos de análisis técnico.",
+        pdfUse:
+          "Úsalo para entender conceptos, pedir ejemplos paso a paso, depurar lógica de algoritmos y convertir requerimientos técnicos en planes de trabajo.",
+        url: "https://chatgpt.com/",
+      },
+      {
+        name: "Wolfram Alpha",
+        use: "Cálculo, álgebra y verificación de resultados.",
+        pdfDescription:
+          "Motor computacional especializado en matemáticas, física e ingeniería, útil para resolver operaciones, verificar resultados y visualizar procedimientos.",
+        pdfUse:
+          "Úsalo para comprobar ecuaciones, resolver derivadas e integrales, validar conversiones y revisar si tus cálculos intermedios son consistentes.",
+        url: "https://www.wolframalpha.com/",
+      },
+      {
+        name: "GitHub Copilot",
+        use: "Programación asistida y limpieza de código.",
+        pdfDescription:
+          "Asistente de desarrollo integrado en el editor que ayuda a escribir, completar, refactorizar y explorar soluciones de código con mayor velocidad.",
+        pdfUse:
+          "Úsalo para generar funciones base, completar estructuras repetitivas, documentar fragmentos de código y acelerar prototipos técnicos.",
+        url: "https://github.com/features/copilot",
+      },
+      {
+        name: "Notion AI",
+        use: "Documentación y organización de proyectos.",
+        pdfDescription:
+          "Entorno de documentación que permite capturar decisiones técnicas, resumir hallazgos y convertir notas dispersas en bitácoras útiles.",
+        pdfUse:
+          "Úsalo para documentar experimentos, registrar avances, crear reportes de laboratorio y ordenar materiales de estudio o desarrollo.",
+        url: "https://www.notion.so/product/ai",
+      },
+      {
+        name: "Perplexity",
+        use: "Consulta de fuentes técnicas y referencias.",
+        pdfDescription:
+          "Buscador con respuestas resumidas y citas que facilita explorar documentación, referencias técnicas y comparativas de tecnologías.",
+        pdfUse:
+          "Úsalo para investigar estándares, revisar documentación reciente, ubicar papers o encontrar referencias técnicas confiables con rapidez.",
+        url: "https://www.perplexity.ai/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Explicar conceptos, fórmulas y código." },
@@ -51,6 +134,9 @@ const areas = [
       "Describe el problema, los datos y lo que ya intentaste.",
       "Pide pasos intermedios, no solo la respuesta final.",
       "Solicita validación o revisión de tu procedimiento.",
+      "Especifica unidades, restricciones y precision numerica esperada.",
+      "Pide una comprobacion final con metodos alternativos si es posible.",
+      "Solicita que identifique supuestos y riesgos tecnicos de la solucion.",
     ],
   },
   {
@@ -61,11 +147,51 @@ const areas = [
     careers: ["Diseño Gráfico", "Arquitectura", "UX/UI", "Arte Digital"],
     pdfTagline: "Explora ideas, crea prototipos y presenta conceptos visuales con más velocidad.",
     aiTools: [
-      { name: "Figma", use: "Diseño de interfaces, prototipos y sistemas visuales." },
-      { name: "Adobe Firefly", use: "Generación de imágenes e ideas visuales." },
-      { name: "Canva", use: "Piezas rápidas, presentaciones y posters." },
-      { name: "Midjourney", use: "Exploración conceptual y moodboards." },
-      { name: "ChatGPT", use: "Briefs, naming, storytelling y presentaciones." },
+      {
+        name: "Figma",
+        use: "Diseño de interfaces, prototipos y sistemas visuales.",
+        pdfDescription:
+          "Plataforma colaborativa para diseñar pantallas, sistemas visuales, flujos de usuario y prototipos navegables en equipo.",
+        pdfUse:
+          "Úsalo para wireframes, prototipos UX/UI, componentes reutilizables, mapas de experiencia y presentaciones de diseño funcional.",
+        url: "https://www.figma.com/",
+      },
+      {
+        name: "Adobe Firefly",
+        use: "Generación de imágenes e ideas visuales.",
+        pdfDescription:
+          "Herramienta generativa enfocada en producir variaciones visuales, composiciones gráficas y recursos creativos listos para iterar.",
+        pdfUse:
+          "Úsalo para generar conceptos visuales, fondos, variaciones de estilo, exploraciones de color y apoyo para presentaciones creativas.",
+        url: "https://firefly.adobe.com/",
+      },
+      {
+        name: "Canva",
+        use: "Piezas rápidas, presentaciones y posters.",
+        pdfDescription:
+          "Editor visual accesible para crear materiales de comunicación, portadas, infografías y presentaciones con rapidez.",
+        pdfUse:
+          "Úsalo para armar posters, dossieres visuales, presentaciones académicas, piezas de redes y materiales de comunicación express.",
+        url: "https://www.canva.com/",
+      },
+      {
+        name: "Midjourney",
+        use: "Exploración conceptual y moodboards.",
+        pdfDescription:
+          "Generador de imágenes orientado a exploración conceptual, estética y narrativa visual para fases tempranas de ideación.",
+        pdfUse:
+          "Úsalo para moodboards, exploración de estilos, referencias visuales, atmósferas y conceptos previos antes de producir piezas finales.",
+        url: "https://www.midjourney.com/",
+      },
+      {
+        name: "ChatGPT",
+        use: "Briefs, naming, storytelling y presentaciones.",
+        pdfDescription:
+          "Asistente textual que ayuda a construir el discurso detrás de una propuesta visual: concepto, narrativa, estructura y argumentación.",
+        pdfUse:
+          "Úsalo para escribir briefs, definir nombres, construir storytelling, preparar racionales de diseño y fortalecer presentaciones ante clientes o docentes.",
+        url: "https://chatgpt.com/",
+      },
     ],
     tools: [
       { name: "Figma", use: "Diseño de interfaces y prototipos." },
@@ -78,6 +204,9 @@ const areas = [
       "Define estilo, colores, referencia y formato de entrega.",
       "Pide variantes: minimalista, profesional o experimental.",
       "Especifica el objetivo de usuario o cliente.",
+      "Aclara plataforma de uso (web, movil, cartel, redes) antes de generar.",
+      "Pide una propuesta visual y otra centrada en conversion o claridad.",
+      "Solicita criterios de evaluacion del diseno para iterar mas rapido.",
     ],
   },
   {
@@ -88,11 +217,51 @@ const areas = [
     careers: ["Derecho", "Psicología", "Comunicación", "Relaciones Internacionales"],
     pdfTagline: "Mejora tu argumentación, sintetiza fuentes y escribe con mejor estructura.",
     aiTools: [
-      { name: "ChatGPT", use: "Redacción, esquemas, análisis y preparación de ideas." },
-      { name: "Grammarly", use: "Corrección de estilo y claridad." },
-      { name: "Perplexity", use: "Búsqueda con fuentes para investigación." },
-      { name: "Notion AI", use: "Resúmenes, notas y organización de lectura." },
-      { name: "Claude", use: "Textos largos, síntesis y revisión de documentos." },
+      {
+        name: "ChatGPT",
+        use: "Redacción, esquemas, análisis y preparación de ideas.",
+        pdfDescription:
+          "Asistente útil para ordenar argumentos, plantear esquemas de ensayo, preparar intervenciones y revisar distintas perspectivas de un tema.",
+        pdfUse:
+          "Úsalo para estructurar ensayos, preparar debates, generar preguntas de estudio, resumir lecturas y practicar explicaciones con lenguaje claro.",
+        url: "https://chatgpt.com/",
+      },
+      {
+        name: "Grammarly",
+        use: "Corrección de estilo y claridad.",
+        pdfDescription:
+          "Herramienta enfocada en mejorar claridad, gramática, tono y consistencia en textos académicos y profesionales.",
+        pdfUse:
+          "Úsalo para corregir redacción, mejorar claridad argumentativa, pulir ensayos y revisar si tu texto suena más formal, claro o persuasivo.",
+        url: "https://www.grammarly.com/",
+      },
+      {
+        name: "Perplexity",
+        use: "Búsqueda con fuentes para investigación.",
+        pdfDescription:
+          "Buscador asistido con citas que ayuda a localizar fuentes iniciales, referencias contextuales y explicaciones sintetizadas de temas complejos.",
+        pdfUse:
+          "Úsalo para ubicar antecedentes, comparar posturas, iniciar una investigación y reunir referencias para lecturas o trabajos escritos.",
+        url: "https://www.perplexity.ai/",
+      },
+      {
+        name: "Notion AI",
+        use: "Resúmenes, notas y organización de lectura.",
+        pdfDescription:
+          "Plataforma de trabajo para organizar notas, lecturas, fichas y resúmenes dentro de un mismo espacio estructurado.",
+        pdfUse:
+          "Úsalo para resumir capítulos, construir fichas de lectura, ordenar ideas por tema y consolidar materiales de investigación.",
+        url: "https://www.notion.so/product/ai",
+      },
+      {
+        name: "Claude",
+        use: "Textos largos, síntesis y revisión de documentos.",
+        pdfDescription:
+          "Asistente particularmente fuerte en lectura y síntesis de textos extensos, comparación de documentos y reorganización de ideas complejas.",
+        pdfUse:
+          "Úsalo para revisar artículos largos, extraer ideas clave, comparar textos, resumir documentos jurídicos o académicos y reorganizar argumentos.",
+        url: "https://claude.ai/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Redacción y estructuración de ideas." },
@@ -105,6 +274,9 @@ const areas = [
       "Pide estructura, tono y longitud deseada.",
       "Solicita ejemplos de contraargumentos o casos.",
       "Pide que te resuma y luego que te haga preguntas de repaso.",
+      "Solicita fuentes sugeridas y palabras clave para ampliar investigacion.",
+      "Pide revision de sesgos o vacios argumentativos en tu texto.",
+      "Solicita una version academica y otra divulgativa del mismo contenido.",
     ],
   },
 ];
@@ -269,7 +441,13 @@ claimReward.addEventListener("click", () => {
   claimReward.classList.remove("is-ready");
   rewardsCard.classList.add("reward-burst");
   if (currentArea) {
-    downloadPdf(buildPdfForArea(currentArea, currentCareer || "Carrera personalizada"));
+    const selectedToolsForPdf = currentArea.tools.filter((tool) => selectedToolNames.has(tool.name));
+    const pdfContent = buildPdfForArea(
+      currentArea,
+      currentCareer || "Carrera personalizada",
+      selectedToolsForPdf
+    );
+    downloadPdf(createPdfBlob(pdfContent));
   }
 });
 
@@ -288,38 +466,73 @@ dropZone.addEventListener("drop", (event) => {
   if (tool) addSelectedTool(tool);
 });
 
-function buildPdfForArea(area, career) {
-  const lines = [];
-  lines.push("GUIA DE IA BASICA PARA UNIVERSITARIOS");
-  lines.push(`Area: ${area.title}`);
-  lines.push(`Carrera: ${career}`);
-  lines.push("");
-  lines.push(`Enfoque: ${area.pdfTagline}`);
-  lines.push("");
-  lines.push("Herramientas de IA recomendadas:");
-  area.aiTools.forEach((tool, index) => {
-    lines.push(`${index + 1}. ${tool.name}: ${tool.use}`);
+function buildPdfForArea(area, career, selectedTools) {
+  const aiToolMap = new Map(area.aiTools.map((tool) => [tool.name, tool]));
+  const selectedToolsDetailed = selectedTools.map((tool) => {
+    const detail = aiToolMap.get(tool.name);
+    return {
+      label: tool.name,
+      body: detail?.pdfDescription || tool.use,
+      supportingText: detail?.pdfUse || tool.use,
+      link: detail?.url || "",
+    };
   });
-  lines.push("");
-  lines.push("Mini tips para prompts:");
-  area.promptTips.forEach((tip, index) => {
-    lines.push(`${index + 1}. ${tip}`);
-  });
-  lines.push("");
-  lines.push("Machote rapido de prompt:");
-  lines.push("Quiero que me ayudes con [tarea].");
-  lines.push("Contexto: [materia, proyecto o problema].");
-  lines.push("Objetivo: [lo que necesito lograr].");
-  lines.push("Formato: [lista, tabla, ejemplo, resumen, pasos].");
-  lines.push("Tono: [academico, sencillo, profesional].");
-  lines.push("");
-  lines.push("Consejo extra:");
-  lines.push("Pide siempre que te de una primera version, luego una mejora y al final una revision.");
-  lines.push("");
-  lines.push(`Creado por ${creator.name}`);
-  lines.push(creator.linkedin);
-  lines.push(creator.email);
-  return lines;
+  const selectedNames = new Set(selectedTools.map((tool) => tool.name));
+  const additionalTools = area.aiTools
+    .filter((tool) => !selectedNames.has(tool.name))
+    .map((tool) => ({
+      label: tool.name,
+      body: tool.pdfDescription || tool.use,
+      supportingText: tool.pdfUse || tool.use,
+      link: tool.url || "",
+    }));
+
+  return {
+    title: `Kit IA para ${career}`,
+    subtitle: `Guia personalizada para ${area.title}`,
+    badge: "Recompensa desbloqueada",
+    heroText: area.pdfTagline,
+    stats: [
+      { label: "Area", value: area.title },
+      { label: "Carrera", value: career },
+      { label: "Herramientas elegidas", value: `${selectedTools.length}` },
+    ],
+    sections: [
+      {
+        title: "Herramientas que elegiste",
+        intro: "Este es el kit que armó el jugador dentro del tablero interactivo.",
+        cards: selectedToolsDetailed,
+      },
+      {
+        title: "Por que encaja con tu area",
+        textBlocks: [
+          area.insight,
+          `Tu combinacion para ${career} prioriza investigacion, organizacion y ejecucion con IA.`,
+        ],
+      },
+      {
+        title: "Otras herramientas recomendadas",
+        intro: "Puedes sumar estas opciones para ampliar tu stack sin salirte de tu area.",
+        cards: additionalTools,
+      },
+      {
+        title: "Mini tips para prompts",
+        bullets: area.promptTips,
+      },
+      {
+        title: "La Anatomia del Prompt Perfecto (El Framework)",
+        bullets: [
+          "Para que un prompt funcione al primer o segundo intento, debe tener una estructura clara.",
+          "Rol: Quien es la IA (ej. Actua como un experto en SEO).",
+          "Contexto: Cual es el trasfondo (ej. Estamos lanzando un blog de cafe artesanal).",
+          "Tarea: Que debe hacer exactamente (ej. Escribe 5 titulos atractivos).",
+          "Restricciones: Que limites tiene (ej. Maximo 60 caracteres, no uses la palabra mejor).",
+          "Formato: Como quieres la respuesta (ej. En una tabla con columnas de Titulo y Enfoque).",
+        ],
+      },
+    ],
+    footer: [`Creado por ${creator.name}`, creator.linkedin, creator.email],
+  };
 }
 
 function escapePdfText(text) {
@@ -353,54 +566,365 @@ function wrapLines(lines, maxCharsPerLine) {
   return wrapped;
 }
 
-function createPdfBlob(title, lines) {
+function createPdfBlob(documentData) {
   const pageWidth = 595.28;
   const pageHeight = 841.89;
-  const marginLeft = 44;
-  const marginTop = 52;
-  const marginBottom = 48;
-  const fontSize = 12;
-  const leading = 16;
-  const maxCharsPerLine = 82;
-  const linesPerPage = Math.floor((pageHeight - marginTop - marginBottom) / leading);
-  const bodyLines = wrapLines(lines, maxCharsPerLine);
+  const marginX = 36;
+  const marginTop = 30;
+  const marginBottom = 30;
+  const contentWidth = pageWidth - marginX * 2;
   const pages = [];
-  for (let i = 0; i < bodyLines.length; i += linesPerPage) {
-    pages.push(bodyLines.slice(i, i + linesPerPage));
-  }
   const objects = [];
+
+  const palette = {
+    cream: [0.988, 0.98, 0.949],
+    white: [1, 1, 1],
+    navy: [0.063, 0.125, 0.2],
+    muted: [0.365, 0.412, 0.471],
+    blue: [0.176, 0.424, 0.875],
+    green: [0.118, 0.541, 0.353],
+    amber: [0.843, 0.541, 0.122],
+    violet: [0.482, 0.38, 1],
+    line: [0.875, 0.894, 0.922],
+    softBlue: [0.894, 0.933, 1],
+    softViolet: [0.929, 0.91, 1],
+    softGreen: [0.902, 0.969, 0.937],
+  };
+
+  const pageState = { ops: [], cursorY: marginTop, pageNumber: 0 };
+
   const addObject = (content) => {
     objects.push(content);
     return objects.length;
   };
 
+  const addPage = () => {
+    if (pageState.ops.length) {
+      pages.push(pageState.ops.join("\n"));
+    }
+    pageState.ops = [];
+    pageState.cursorY = marginTop;
+    pageState.pageNumber += 1;
+    pageState.ops.push(`${palette.cream.join(" ")} rg`);
+    pageState.ops.push(`0 0 ${pageWidth} ${pageHeight} re f`);
+  };
+
+  const toPdfY = (top, height = 0) => pageHeight - top - height;
+  const rgbFill = (color) => `${color.join(" ")} rg`;
+  const rgbStroke = (color) => `${color.join(" ")} RG`;
+  const estimateMaxChars = (width, fontSize) => Math.max(14, Math.floor(width / (fontSize * 0.56)));
+  const wrapText = (text, width, fontSize) => wrapLines([text], estimateMaxChars(width, fontSize));
+  const textHeight = (lines, fontSize, leading = fontSize + 4) => Math.max(lines.length, 1) * leading;
+  const escapeLines = (lines) => lines.map((line) => escapePdfText(line));
+
+  const drawText = (lines, x, top, options = {}) => {
+    const font = options.font || "F1";
+    const fontSize = options.fontSize || 12;
+    const leading = options.leading || fontSize + 4;
+    const color = options.color || palette.navy;
+    const safeLines = escapeLines(lines);
+
+    pageState.ops.push("BT");
+    pageState.ops.push(`/${font} ${fontSize} Tf`);
+    pageState.ops.push(rgbFill(color));
+    pageState.ops.push(`${x} ${toPdfY(top)} Td`);
+    safeLines.forEach((line, index) => {
+      if (index > 0) {
+        pageState.ops.push(`0 -${leading} Td`);
+      }
+      pageState.ops.push(`(${line}) Tj`);
+    });
+    pageState.ops.push("ET");
+  };
+
+  const drawRect = (x, top, width, height, fillColor, strokeColor = null, lineWidth = 1) => {
+    if (fillColor) {
+      pageState.ops.push(rgbFill(fillColor));
+    }
+    if (strokeColor) {
+      pageState.ops.push(rgbStroke(strokeColor));
+      pageState.ops.push(`${lineWidth} w`);
+    }
+    pageState.ops.push(`${x} ${toPdfY(top, height)} ${width} ${height} re ${strokeColor ? "B" : "f"}`);
+  };
+
+  const ensureSpace = (heightNeeded) => {
+    if (pageState.cursorY + heightNeeded > pageHeight - marginBottom) {
+      addPage();
+    }
+  };
+
+  const addGap = (size) => {
+    pageState.cursorY += Math.max(4, Math.round(size * 0.55));
+  };
+
+  const drawStatRow = (stats) => {
+    const gap = 8;
+    const cardWidth = (contentWidth - gap * (stats.length - 1)) / stats.length;
+    const cardHeight = 50;
+    ensureSpace(cardHeight + 8);
+    stats.forEach((stat, index) => {
+      const x = marginX + index * (cardWidth + gap);
+      drawRect(x, pageState.cursorY, cardWidth, cardHeight, palette.white, palette.line);
+      drawRect(x, pageState.cursorY, cardWidth, 8, palette.softBlue);
+      drawText([stat.label.toUpperCase()], x + 12, pageState.cursorY + 17, {
+        font: "F2",
+        fontSize: 8,
+        leading: 10,
+        color: palette.blue,
+      });
+      drawText(wrapText(stat.value, cardWidth - 24, 11), x + 12, pageState.cursorY + 32, {
+        font: "F2",
+        fontSize: 11,
+        leading: 13,
+        color: palette.navy,
+      });
+    });
+    pageState.cursorY += cardHeight + 10;
+  };
+
+  const drawSectionTitle = (title) => {
+    ensureSpace(24);
+    drawText([title], marginX, pageState.cursorY, {
+      font: "F2",
+      fontSize: 16,
+      leading: 20,
+      color: palette.navy,
+    });
+    pageState.cursorY += 22;
+  };
+
+  const drawParagraph = (text, options = {}) => {
+    const fontSize = options.fontSize || 11;
+    const leading = options.leading || 14;
+    const color = options.color || palette.muted;
+    const lines = wrapText(text, contentWidth, fontSize);
+    const height = textHeight(lines, fontSize, leading);
+    ensureSpace(height + 4);
+    drawText(lines, marginX, pageState.cursorY, {
+      font: options.font || "F1",
+      fontSize,
+      leading,
+      color,
+    });
+    pageState.cursorY += height + 4;
+  };
+
+  const drawBulletList = (items) => {
+    items.forEach((item) => {
+      const bulletLines = wrapText(item, contentWidth - 24, 10);
+      const height = textHeight(bulletLines, 10, 13);
+      ensureSpace(height + 6);
+      drawRect(marginX, pageState.cursorY + 3, 6, 6, palette.amber);
+      drawText(bulletLines, marginX + 14, pageState.cursorY, {
+        fontSize: 10,
+        leading: 13,
+        color: palette.muted,
+      });
+      pageState.cursorY += height + 4;
+    });
+  };
+
+  const drawPlainList = (items) => {
+    items.forEach((item) => {
+      const tipLines = wrapText(item, contentWidth, 10);
+      const height = textHeight(tipLines, 10, 13);
+      ensureSpace(height + 5);
+      drawText(tipLines, marginX, pageState.cursorY, {
+        fontSize: 10,
+        leading: 13,
+        color: palette.muted,
+      });
+      pageState.cursorY += height + 3;
+    });
+  };
+
+  const drawTextMarkerList = (items, marker = "- ") => {
+    items.forEach((item) => {
+      const itemLines = wrapText(`${marker}${item}`, contentWidth, 10);
+      const height = textHeight(itemLines, 10, 13);
+      ensureSpace(height + 6);
+      drawText(itemLines, marginX, pageState.cursorY, {
+        fontSize: 10,
+        leading: 13,
+        color: palette.muted,
+      });
+      pageState.cursorY += height + 4;
+    });
+  };
+
+  const drawCards = (cards, cardColor) => {
+    const columnGap = 12;
+    const cardWidth = (contentWidth - columnGap) / 2;
+    const innerWidth = cardWidth - 30;
+
+    const buildCardLayout = (card) => {
+      const labelLines = wrapText(card.label, innerWidth, 12);
+      const bodyLines = wrapText(card.body, innerWidth, 10);
+      const supportingLines = card.supportingText ? wrapText(card.supportingText, innerWidth, 9) : [];
+      const linkLines = card.link ? wrapText(card.link, innerWidth, 8) : [];
+      const cardHeight =
+        20 +
+        textHeight(labelLines, 12, 14) +
+        textHeight(bodyLines, 10, 13) +
+        (supportingLines.length ? textHeight(supportingLines, 9, 12) + 6 : 0) +
+        (linkLines.length ? textHeight(linkLines, 8, 11) + 6 : 0) +
+        14;
+      return { labelLines, bodyLines, supportingLines, linkLines, cardHeight };
+    };
+
+    for (let i = 0; i < cards.length; i += 2) {
+      const leftCard = cards[i];
+      const rightCard = cards[i + 1];
+      const leftLayout = buildCardLayout(leftCard);
+      const rightLayout = rightCard ? buildCardLayout(rightCard) : null;
+      const rowHeight = Math.max(leftLayout.cardHeight, rightLayout ? rightLayout.cardHeight : 0);
+
+      ensureSpace(rowHeight + 8);
+
+      const drawCardAt = (card, layout, x, y) => {
+        drawRect(x, y, cardWidth, layout.cardHeight, palette.white, palette.line);
+        drawRect(x, y, 8, layout.cardHeight, cardColor);
+        drawText(layout.labelLines, x + 16, y + 14, {
+          font: "F2",
+          fontSize: 12,
+          leading: 14,
+          color: palette.navy,
+        });
+
+        let textTop = y + 28 + textHeight(layout.labelLines, 12, 14);
+        drawText(layout.bodyLines, x + 16, textTop, {
+          fontSize: 10,
+          leading: 13,
+          color: palette.muted,
+        });
+
+        textTop += textHeight(layout.bodyLines, 10, 13) + 6;
+        if (layout.supportingLines.length) {
+          drawText(layout.supportingLines, x + 16, textTop, {
+            fontSize: 9,
+            leading: 12,
+            color: palette.navy,
+          });
+          textTop += textHeight(layout.supportingLines, 9, 12) + 6;
+        }
+
+        if (layout.linkLines.length) {
+          drawText(layout.linkLines, x + 16, textTop, {
+            fontSize: 8,
+            leading: 11,
+            color: palette.blue,
+          });
+        }
+      };
+
+      drawCardAt(leftCard, leftLayout, marginX, pageState.cursorY);
+      if (rightCard && rightLayout) {
+        drawCardAt(rightCard, rightLayout, marginX + cardWidth + columnGap, pageState.cursorY);
+      }
+
+      pageState.cursorY += rowHeight + 8;
+    }
+  };
+
+  addPage();
+
+  drawRect(marginX, pageState.cursorY, contentWidth, 132, palette.softBlue, palette.line);
+  drawRect(marginX + contentWidth - 88, pageState.cursorY + 18, 52, 52, palette.softViolet);
+  drawRect(marginX + contentWidth - 64, pageState.cursorY + 52, 28, 28, palette.softGreen);
+  drawText([documentData.badge], marginX + 20, pageState.cursorY + 20, {
+    font: "F2",
+    fontSize: 10,
+    leading: 12,
+    color: palette.blue,
+  });
+  drawText(wrapText(documentData.title, contentWidth - 130, 24), marginX + 20, pageState.cursorY + 42, {
+    font: "F2",
+    fontSize: 24,
+    leading: 28,
+    color: palette.navy,
+  });
+  drawText(wrapText(documentData.subtitle, contentWidth - 130, 12), marginX + 20, pageState.cursorY + 84, {
+    font: "F2",
+    fontSize: 12,
+    leading: 14,
+    color: palette.green,
+  });
+  drawText(wrapText(documentData.heroText, contentWidth - 130, 11), marginX + 20, pageState.cursorY + 102, {
+    fontSize: 11,
+    leading: 14,
+    color: palette.muted,
+  });
+  pageState.cursorY += 144;
+
+  drawStatRow(documentData.stats);
+
+  documentData.sections.forEach((section, index) => {
+    if (section.title === "Herramientas que elegiste") {
+      addGap(16);
+    }
+    if (section.title === "Por que encaja con tu area") {
+      addGap(14);
+    }
+    if (section.title === "Otras herramientas recomendadas") {
+      addPage();
+      addGap(6);
+    }
+    if (section.title === "Mini tips para prompts") {
+      addGap(22);
+    }
+    if (section.title === "La Anatomia del Prompt Perfecto (El Framework)") {
+      addGap(20);
+    }
+    drawSectionTitle(section.title);
+    if (section.intro) {
+      drawParagraph(section.intro);
+    }
+    if (section.textBlocks) {
+      section.textBlocks.forEach((text) => drawParagraph(text));
+    }
+    if (section.cards && section.cards.length) {
+      const accent = index === 0 ? palette.blue : palette.violet;
+      drawCards(section.cards, accent);
+    }
+    if (section.bullets && section.bullets.length) {
+      if (
+        section.title === "Mini tips para prompts" ||
+        section.title === "La Anatomia del Prompt Perfecto (El Framework)"
+      ) {
+        drawTextMarkerList(section.bullets, "- ");
+      } else {
+        drawBulletList(section.bullets);
+      }
+    }
+    addGap(8);
+  });
+
+  ensureSpace(64);
+  drawRect(marginX, pageState.cursorY, contentWidth, 54, palette.softGreen, palette.line);
+  drawText(documentData.footer, marginX + 16, pageState.cursorY + 17, {
+    fontSize: 10,
+    leading: 12,
+    color: palette.navy,
+  });
+
+  if (pageState.ops.length) {
+    pages.push(pageState.ops.join("\n"));
+  }
+
   const fontObj = addObject("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
+  const boldFontObj = addObject("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>");
   const contentObjIds = [];
   const pageObjIds = [];
 
-  pages.forEach((pageLines, pageIndex) => {
-    const textOps = [];
-    textOps.push("BT");
-    textOps.push(`/F1 ${fontSize} Tf`);
-    textOps.push(`${marginLeft} ${pageHeight - marginTop} Td`);
-    pageLines.forEach((line, idx) => {
-      const safeLine = escapePdfText(line);
-      if (idx === 0) {
-        textOps.push(`(${safeLine}) Tj`);
-      } else {
-        textOps.push(`0 -${leading} Td`);
-        textOps.push(`(${safeLine}) Tj`);
-      }
-    });
-    textOps.push("ET");
-    const contentStream = textOps.join("\n");
+  pages.forEach((contentStream) => {
     const contentObj = addObject(`<< /Length ${contentStream.length} >>\nstream\n${contentStream}\nendstream`);
     contentObjIds.push(contentObj);
   });
 
   pages.forEach((_, index) => {
     const pageObj = addObject(
-      `<< /Type /Page /Parent 0 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /Font << /F1 ${fontObj} 0 R >> >> /Contents ${contentObjIds[index]} 0 R >>`
+      `<< /Type /Page /Parent 0 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /Font << /F1 ${fontObj} 0 R /F2 ${boldFontObj} 0 R >> >> /Contents ${contentObjIds[index]} 0 R >>`
     );
     pageObjIds.push(pageObj);
   });
@@ -415,7 +939,7 @@ function createPdfBlob(title, lines) {
 
   const catalogObj = addObject(`<< /Type /Catalog /Pages ${pagesObjIndex} 0 R >>`);
   const infoObj = addObject(
-    `<< /Title (${escapePdfText(title)}) /Author (${escapePdfText(creator.name)}) /Subject (Guia IA universitaria) >>`
+    `<< /Title (${escapePdfText(documentData.title)}) /Author (${escapePdfText(creator.name)}) /Subject (Guia IA universitaria) >>`
   );
 
   let pdf = "%PDF-1.4\n";
