@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa IA por Áreas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Juego interactivo para universitarios</p>
+          <h1>Sube de nivel eligiendo tu área, tu carrera y tu kit de IA ideal.</h1>
+          <p class="lead">
+            Toca un cuadrante, selecciona o escribe tu carrera y arrastra las herramientas de IA que sí
+            encajan con tu campo de estudio para ganar puntos y desbloquear recompensas.
+          </p>
+          <p class="creator-line">
+            Creado por <strong>Evelyn Salazar Tenango</strong> ·
+            <a href="https://www.linkedin.com/in/evelynsalazartenango/" target="_blank" rel="noreferrer">LinkedIn</a> ·
+            <a href="mailto:evelynsalazartenango@gmail.com">evelynsalazartenango@gmail.com</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-stat stat-accent">
+            <span id="playerLevel">Nivel 1</span>
+            <small>Estudiante estratega</small>
+          </div>
+          <div class="hero-stat">
+            <span id="playerXP">0 XP</span>
+            <small>experiencia ganada</small>
+          </div>
+          <div class="hero-stat">
+            <span id="playerCoins">0</span>
+            <small>monedas IA</small>
+          </div>
+          <div class="hero-stat">
+            <span id="playerStreak">0</span>
+            <small>racha de aciertos</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="quest-banner">
+        <div>
+          <p class="eyebrow">Misión activa</p>
+          <h2 id="questTitle">Desbloquea tu build de herramientas</h2>
+          <p id="questText">
+            Elige un área para recibir tu primera misión y empezar a ganar recompensas.
+          </p>
+        </div>
+        <div class="reward-orb">
+          <span>🎁</span>
+          <strong id="rewardText">Recompensa bloqueada</strong>
+        </div>
+      </section>
+
+      <section class="grid-panel">
+        <div class="panel-head">
+          <h2>1. Elige tu área</h2>
+          <p>Haz clic en un cuadrante para abrir sus carreras y herramientas recomendadas.</p>
+        </div>
+        <div id="areasGrid" class="areas-grid" aria-label="Áreas de estudio"></div>
+      </section>
+
+      <section id="careerPanel" class="career-panel hidden" aria-live="polite">
+        <div class="panel-head">
+          <h2 id="careerPanelTitle">2. Selecciona tu carrera</h2>
+          <p>Escoge una opción o escribe la tuya para personalizar el tablero.</p>
+        </div>
+        <div class="career-controls">
+          <div id="careerChips" class="career-chips"></div>
+          <label class="custom-career">
+            <span>O escribe tu carrera</span>
+            <input id="careerInput" type="text" placeholder="Ej. Ingeniería en Datos" />
+          </label>
+        </div>
+      </section>
+
+      <section id="gamePanel" class="game-panel hidden">
+        <div class="panel-head">
+          <h2 id="gameTitle">3. Arrastra herramientas de IA</h2>
+          <p id="gameSubtitle">Las mejores herramientas sugeridas aparecerán para tu carrera.</p>
+        </div>
+        <div class="game-layout">
+          <div class="toolbox">
+            <div class="toolbox-head">
+              <h3>Herramientas</h3>
+              <span class="toolbox-note">Arrastra o toca para sumar puntos.</span>
+            </div>
+            <div id="toolList" class="tool-list"></div>
+          </div>
+          <div class="workspace">
+            <div class="drop-zone" id="dropZone">
+              <p class="drop-title">Zona de carga</p>
+              <p class="drop-subtitle">Suelta aquí las herramientas que usarías en tu área.</p>
+              <div id="selectedTools" class="selected-tools"></div>
+              <div id="emptyState" class="empty-state">
+                Todavía no has arrastrado herramientas.
+              </div>
+            </div>
+            <div class="insight-card">
+              <h3>Tu combinación ideal</h3>
+              <p id="insightText">Elige una carrera para ver una sugerencia rápida.</p>
+            </div>
+            <div class="rewards-card">
+              <h3>Recompensa</h3>
+              <div class="reward-progress">
+                <div id="rewardBar" class="reward-bar"></div>
+              </div>
+              <p id="rewardStatus">Consigue 3 aciertos para descargar tu PDF guía IA.</p>
+              <button id="claimReward" class="claim-button" type="button" disabled>
+                Descargar PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="areaTemplate">
+      <button class="area-card" type="button">
+        <span class="area-icon"></span>
+        <strong></strong>
+        <p></p>
+      </button>
+    </template>
+
+    <template id="careerTemplate">
+      <button class="career-chip" type="button"></button>
+    </template>
+
+    <template id="toolTemplate">
+      <button class="tool-card" type="button" draggable="true">
+        <strong></strong>
+        <span></span>
+      </button>
+    </template>
+
+    <template id="selectedTemplate">
+      <div class="selected-tool">
+        <strong></strong>
+        <span></span>
+      </div>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
