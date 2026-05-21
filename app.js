@@ -638,6 +638,17 @@ function createPdfBlob(documentData) {
   };
 
   const drawRect = (x, top, width, height, fillColor, strokeColor = null, lineWidth = 1) => {
+    const y = toPdfY(top, height);
+    const hasFill = Boolean(fillColor);
+    const hasStroke = Boolean(strokeColor);
+    const radius = Math.min(7, width / 2, height / 2);
+    const kappa = 0.5522847498;
+    const control = radius * kappa;
+
+    if (!hasFill && !hasStroke) {
+      return;
+    }
+
     if (fillColor) {
       pageState.ops.push(rgbFill(fillColor));
     }
@@ -645,7 +656,38 @@ function createPdfBlob(documentData) {
       pageState.ops.push(rgbStroke(strokeColor));
       pageState.ops.push(`${lineWidth} w`);
     }
-    pageState.ops.push(`${x} ${toPdfY(top, height)} ${width} ${height} re ${strokeColor ? "B" : "f"}`);
+
+    if (radius <= 0.01) {
+      const paint = hasFill && hasStroke ? "B" : hasFill ? "f" : "S";
+      pageState.ops.push(`${x} ${y} ${width} ${height} re ${paint}`);
+      return;
+    }
+
+    const x0 = x;
+    const y0 = y;
+    const x1 = x + width;
+    const y1 = y + height;
+
+    pageState.ops.push(`${x0 + radius} ${y0} m`);
+    pageState.ops.push(`${x1 - radius} ${y0} l`);
+    pageState.ops.push(
+      `${x1 - radius + control} ${y0} ${x1} ${y0 + radius - control} ${x1} ${y0 + radius} c`
+    );
+    pageState.ops.push(`${x1} ${y1 - radius} l`);
+    pageState.ops.push(
+      `${x1} ${y1 - radius + control} ${x1 - radius + control} ${y1} ${x1 - radius} ${y1} c`
+    );
+    pageState.ops.push(`${x0 + radius} ${y1} l`);
+    pageState.ops.push(
+      `${x0 + radius - control} ${y1} ${x0} ${y1 - radius + control} ${x0} ${y1 - radius} c`
+    );
+    pageState.ops.push(`${x0} ${y0 + radius} l`);
+    pageState.ops.push(
+      `${x0} ${y0 + radius - control} ${x0 + radius - control} ${y0} ${x0 + radius} ${y0} c`
+    );
+
+    const paint = hasFill && hasStroke ? "b" : hasFill ? "f" : "s";
+    pageState.ops.push(paint);
   };
 
   const ensureSpace = (heightNeeded) => {
