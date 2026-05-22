@@ -4,7 +4,16 @@ const areas = [
     title: "Negocios",
     icon: "📊",
     description: "Estrategia, finanzas, emprendimiento y análisis de mercados.",
-    careers: ["Administración", "Finanzas", "Mercadotecnia", "Negocios Internacionales"],
+    careers: [
+      "Licenciatura en Contaduría Pública y Finanzas",
+      "Licenciatura en Desarrollo de Talento y Cultura Organizacional",
+      "Licenciatura en Emprendimiento e Innovación",
+      "Licenciatura en Estrategia y Transformación de Negocios",
+      "Licenciatura en Finanzas",
+      "Licenciatura en Inteligencia de Negocios",
+      "Licenciatura en Mercadotecnia",
+      "Licenciatura en Negocios Internacionales",
+    ],
     pdfTagline: "Toma decisiones con datos, presenta mejor tus ideas y organiza proyectos con claridad.",
     aiTools: [
       {
@@ -74,7 +83,27 @@ const areas = [
     title: "Ingeniería y Ciencias",
     icon: "🧪",
     description: "Modelado, laboratorio, simulación y resolución de problemas técnicos.",
-    careers: ["Ingeniería Industrial", "Sistemas", "Biotecnología", "Física"],
+    careers: [
+      "Ingeniería Biomédica",
+      "Ingeniería Civil",
+      "Ingeniería en Alimentos",
+      "Ingeniería en Biosistemas Agroalimentarios",
+      "Ingeniería en Biotecnología",
+      "Ingeniería en Desarrollo Sustentable",
+      "Ingeniería en Electrónica y Semiconductores",
+      "Ingeniería en Física Industrial",
+      "Ingeniería en Innovación y Desarrollo",
+      "Ingeniería en Inteligencia Artificial y Ciencia de Datos",
+      "Ingeniería en Nanotecnología y Materiales",
+      "Ingeniería en Robótica y Sistemas Inteligentes",
+      "Ingeniería en Tecnologías Computacionales",
+      "Ingeniería en Transformación Digital de Negocios",
+      "Ingeniería Industrial y de Sistemas",
+      "Ingeniería Mecánica",
+      "Ingeniería Mecatrónica",
+      "Ingeniería Química",
+      "Licenciatura en Biociencias",
+    ],
     pdfTagline: "Convierte conceptos complejos en explicaciones, cálculos y prototipos más rápidos.",
     aiTools: [
       {
@@ -140,11 +169,11 @@ const areas = [
     ],
   },
   {
-    id: "diseno",
+    id: "arquitectura_arte_diseno",
     title: "Arquitectura, Arte y Diseño",
     icon: "🎨",
     description: "Creatividad visual, prototipado, composición y experiencia de usuario.",
-    careers: ["Diseño Gráfico", "Arquitectura", "UX/UI", "Arte Digital"],
+    careers: ["Arquitectura", "Licenciatura en Arte Digital", "Licenciatura en Diseño", "Licenciatura en Urbanismo"],
     pdfTagline: "Explora ideas, crea prototipos y presenta conceptos visuales con más velocidad.",
     aiTools: [
       {
@@ -210,12 +239,17 @@ const areas = [
     ],
   },
   {
-    id: "sociales",
-    title: "Ciencias Sociales y Humanidades",
-    icon: "📚",
-    description: "Investigación, argumentación, comunicación y pensamiento crítico.",
-    careers: ["Derecho", "Psicología", "Comunicación", "Relaciones Internacionales"],
-    pdfTagline: "Mejora tu argumentación, sintetiza fuentes y escribe con mejor estructura.",
+    id: "sociales_gobierno",
+    title: "Ciencias Sociales y Gobierno",
+    icon: "🏛️",
+    description: "Análisis social, derecho, economía, política pública y relaciones internacionales.",
+    careers: [
+      "Licenciatura en Derecho",
+      "Licenciatura en Economía",
+      "Licenciatura en Gobierno y Transformación Pública",
+      "Licenciatura en Relaciones Internacionales",
+    ],
+    pdfTagline: "Argumenta con claridad, sustenta con fuentes y transforma realidades desde lo público y lo social.",
     aiTools: [
       {
         name: "ChatGPT",
@@ -277,6 +311,139 @@ const areas = [
       "Solicita fuentes sugeridas y palabras clave para ampliar investigacion.",
       "Pide revision de sesgos o vacios argumentativos en tu texto.",
       "Solicita una version academica y otra divulgativa del mismo contenido.",
+    ],
+  },
+  {
+    id: "humanidades_educacion",
+    title: "Humanidades y Educación",
+    icon: "🧠",
+    description: "Comunicación, cultura, educación, creación y análisis humanista con tecnología.",
+    careers: [
+      "Licenciatura en Comunicación y Producción Digital",
+      "Licenciatura en Humanidades Digitales e Inteligencia Artificial",
+      "Licenciatura en Innovación y Transformación Educativa",
+      "Licenciatura en Letras y Emprendimiento Editorial",
+      "Licenciatura en Tecnología y Producción Musical",
+    ],
+    pdfTagline: "Estructura ideas, crea contenido y aprende más rápido con investigación y herramientas de IA.",
+    aiTools: [
+      {
+        name: "ChatGPT",
+        use: "Redacción, guiones, esquemas y apoyo creativo.",
+        pdfDescription:
+          "Asistente útil para ordenar ideas, construir estructuras narrativas, preparar guiones, revisar argumentos y mejorar claridad en textos.",
+        pdfUse:
+          "Úsalo para escribir borradores, convertir apuntes en guías de estudio, proponer estructuras de ensayo, generar actividades didácticas y practicar explicaciones.",
+        url: "https://chatgpt.com/",
+      },
+      {
+        name: "Claude",
+        use: "Lectura de textos largos y síntesis.",
+        pdfDescription:
+          "Herramienta enfocada en trabajar con documentos extensos, ideal para sintetizar, comparar versiones y reorganizar contenido con claridad.",
+        pdfUse:
+          "Úsalo para resumir lecturas, reorganizar capítulos, comparar argumentos, pulir estilo y generar versiones ejecutivas de textos largos.",
+        url: "https://claude.ai/",
+      },
+      {
+        name: "Perplexity",
+        use: "Búsqueda con fuentes para investigación.",
+        pdfDescription:
+          "Buscador asistido con citas que ayuda a ubicar fuentes iniciales, antecedentes y referencias para investigar con mayor rapidez.",
+        pdfUse:
+          "Úsalo para armar bibliografía inicial, localizar antecedentes, encontrar definiciones con fuentes y contrastar posturas de autores.",
+        url: "https://www.perplexity.ai/",
+      },
+      {
+        name: "Notion AI",
+        use: "Notas, resúmenes y organización de estudio.",
+        pdfDescription:
+          "Espacio de trabajo para organizar lecturas, fichas, apuntes y proyectos; útil para consolidar materiales en un solo lugar.",
+        pdfUse:
+          "Úsalo para resumir capítulos, construir fichas de lectura, organizar proyectos creativos y planear entregables.",
+        url: "https://www.notion.so/product/ai",
+      },
+    ],
+    tools: [
+      { name: "ChatGPT", use: "Redacción, guiones y estudio." },
+      { name: "Claude", use: "Síntesis de textos largos." },
+      { name: "Perplexity", use: "Investigación con fuentes." },
+      { name: "Notion AI", use: "Notas y organización." },
+    ],
+    insight: "En humanidades y educación, la IA te ayuda a estudiar, crear y argumentar con mejores fuentes.",
+    promptTips: [
+      "Define el objetivo (estudiar, crear, argumentar) y el público.",
+      "Pide estructura antes de pedir redacción final.",
+      "Solicita ejemplos y contraejemplos para afinar tu criterio.",
+      "Pide que cite o sugiera fuentes y palabras clave de búsqueda.",
+      "Pide una versión breve y otra detallada para elegir.",
+      "Pide retroalimentación: claridad, tono, coherencia y sesgos.",
+    ],
+  },
+  {
+    id: "medicina_salud",
+    title: "Medicina y Ciencias de la Salud",
+    icon: "🩺",
+    description: "Atención clínica, bienestar, prevención, evidencia científica y trabajo interdisciplinario.",
+    careers: [
+      "Médico Cirujano",
+      "Médico Cirujano Odontólogo",
+      "Licenciatura en Nutrición y Bienestar Integral",
+      "Licenciatura en Psicología Clínica y de la Salud",
+    ],
+    pdfTagline: "Convierte información clínica en estudio efectivo, comunicación clara y decisiones con evidencia.",
+    aiTools: [
+      {
+        name: "ChatGPT",
+        use: "Repaso, casos clínicos simulados y explicación de conceptos.",
+        pdfDescription:
+          "Asistente para estudiar conceptos, practicar razonamiento clínico con casos simulados y convertir apuntes en guías de repaso.",
+        pdfUse:
+          "Úsalo para crear preguntas tipo examen, repasar mecanismos, practicar anamnesis, y generar resúmenes con tablas y mnemotecnias.",
+        url: "https://chatgpt.com/",
+      },
+      {
+        name: "Perplexity",
+        use: "Búsqueda con fuentes para temas de salud.",
+        pdfDescription:
+          "Buscador asistido con citas que ayuda a ubicar fuentes iniciales y guías para investigación rápida (siempre validando en fuentes clínicas oficiales).",
+        pdfUse:
+          "Úsalo para encontrar guías, revisiones y definiciones; luego verifica en fuentes académicas y clínicas confiables antes de usarlo en tareas.",
+        url: "https://www.perplexity.ai/",
+      },
+      {
+        name: "Claude",
+        use: "Síntesis de artículos y documentos largos.",
+        pdfDescription:
+          "Herramienta útil para sintetizar papers, comparar secciones y estructurar resúmenes largos con claridad.",
+        pdfUse:
+          "Úsalo para resumir artículos, extraer ideas clave, construir mapas conceptuales y comparar tratamientos o enfoques.",
+        url: "https://claude.ai/",
+      },
+      {
+        name: "Notion AI",
+        use: "Bitácoras de estudio y organización de casos/lecturas.",
+        pdfDescription:
+          "Espacio de organización para notas clínicas, fichas y seguimiento de estudio, útil para mantener consistencia en tus apuntes.",
+        pdfUse:
+          "Úsalo para estructurar fichas, registrar aprendizaje de casos y planear repasos por temas.",
+        url: "https://www.notion.so/product/ai",
+      },
+    ],
+    tools: [
+      { name: "ChatGPT", use: "Repaso, casos simulados y explicación." },
+      { name: "Perplexity", use: "Investigación inicial con fuentes." },
+      { name: "Claude", use: "Síntesis de lecturas largas." },
+      { name: "Notion AI", use: "Organización de estudio." },
+    ],
+    insight: "En salud, la IA sirve para estudiar mejor; no reemplaza criterio clínico ni fuentes oficiales.",
+    promptTips: [
+      "Aclara que quieres una explicación educativa, no diagnóstico.",
+      "Pide pasos y razonamiento, no solo conclusiones.",
+      "Solicita tablas diferenciales y banderas rojas cuando aplique.",
+      "Pide fuentes sugeridas y términos de búsqueda.",
+      "Pide preguntas de repaso al final para autoevaluarte.",
+      "Verifica siempre en bibliografía y guías clínicas oficiales.",
     ],
   },
 ];
