@@ -61,12 +61,82 @@ const areas = [
           "Úsalo para crear agendas, documentar avances, resumir clases o juntas y mantener un seguimiento claro de tareas, entregables y responsables.",
         url: "https://www.notion.so/product/ai",
       },
+      {
+        name: "Microsoft Copilot",
+        use: "Apoyo para documentos, ideas y presentaciones.",
+        pdfDescription:
+          "Asistente de IA integrado al ecosistema de Microsoft que ayuda a redactar, resumir, idear y preparar materiales de trabajo con más rapidez.",
+        pdfUse:
+          "Úsalo para preparar borradores de reportes, estructurar presentaciones, mejorar correos, proponer ideas de negocio y convertir notas en acciones.",
+        url: "https://copilot.microsoft.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Asistente general para ideación y borradores.",
+        pdfDescription:
+          "Asistente de IA de Google útil para crear borradores, resumir información, estructurar ideas y resolver dudas de manera conversacional.",
+        pdfUse:
+          "Úsalo para generar esquemas de proyectos, crear guiones de pitch, producir listas de verificación y aterrizar ideas en planes de acción.",
+        url: "https://gemini.google.com/",
+      },
+      {
+        name: "Grammarly",
+        use: "Mejora de claridad, tono y estilo profesional.",
+        pdfDescription:
+          "Herramienta de escritura que ayuda a pulir claridad, tono y consistencia en textos académicos y profesionales.",
+        pdfUse:
+          "Úsalo para revisar correos, ensayos, reportes y presentaciones; pide opciones de tono (formal, directo, persuasivo) antes de enviar.",
+        url: "https://www.grammarly.com/",
+      },
+      {
+        name: "DeepL Write",
+        use: "Reescritura y mejora de redacción (ES/EN).",
+        pdfDescription:
+          "Asistente de escritura enfocado en reescribir y mejorar textos con mejor claridad, gramática y estilo, ideal para comunicación profesional.",
+        pdfUse:
+          "Úsalo para reescribir secciones de reportes, mejorar correos, ajustar tono y crear versiones más claras de tu texto original.",
+        url: "https://www.deepl.com/write",
+      },
+      {
+        name: "NotebookLM",
+        use: "Estudio y síntesis a partir de tus fuentes.",
+        pdfDescription:
+          "Cuaderno de investigación que permite cargar tus propias fuentes (PDFs, links, docs) para resumirlas y conectarlas entre sí.",
+        pdfUse:
+          "Úsalo para convertir lecturas en resúmenes, preparar guías de estudio y extraer puntos clave de tus propios documentos de clase.",
+        url: "https://notebooklm.google/",
+      },
+      {
+        name: "Elicit",
+        use: "Investigación académica y síntesis de papers.",
+        pdfDescription:
+          "Asistente enfocado en investigación: ayuda a encontrar papers, extraer hallazgos y sintetizar evidencia para tareas académicas.",
+        pdfUse:
+          "Úsalo para iniciar una revisión rápida de literatura, crear tablas de evidencia y generar un resumen de hallazgos con enfoque académico.",
+        url: "https://elicit.com/",
+      },
+      {
+        name: "Canva",
+        use: "Diseño rápido para presentaciones y piezas visuales.",
+        pdfDescription:
+          "Herramienta para crear presentaciones, infografías y materiales visuales; útil para comunicar ideas con claridad.",
+        pdfUse:
+          "Úsalo para convertir un reporte en diapositivas, diseñar infografías y presentar resultados de forma visual y entendible.",
+        url: "https://www.canva.com/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Redacción, análisis y brainstorming." },
       { name: "Claude", use: "Documentos largos y síntesis." },
       { name: "Perplexity", use: "Investigación rápida con fuentes." },
       { name: "Power BI", use: "Visualización y dashboards." },
+      { name: "Microsoft Copilot", use: "Borradores, resúmenes y presentaciones." },
+      { name: "Gemini", use: "Ideación y estructura de entregables." },
+      { name: "Grammarly", use: "Claridad, tono y estilo." },
+      { name: "DeepL Write", use: "Reescritura y mejora de textos." },
+      { name: "NotebookLM", use: "Síntesis a partir de tus fuentes." },
+      { name: "Elicit", use: "Investigación y síntesis de papers." },
+      { name: "Canva", use: "Presentaciones e infografías." },
     ],
     insight: "Para negocios, combina investigación, presentaciones y análisis de datos.",
     promptTips: [
@@ -151,12 +221,63 @@ const areas = [
           "Úsalo para investigar estándares, revisar documentación reciente, ubicar papers o encontrar referencias técnicas confiables con rapidez.",
         url: "https://www.perplexity.ai/",
       },
+      {
+        name: "Claude",
+        use: "Lectura y síntesis de documentación técnica.",
+        pdfDescription:
+          "Asistente útil para trabajar con textos largos: documentación, especificaciones, reportes y explicaciones técnicas con claridad.",
+        pdfUse:
+          "Úsalo para resumir papers, explicar conceptos, proponer enfoques de solución y reescribir documentación con mejor estructura.",
+        url: "https://claude.ai/",
+      },
+      {
+        name: "Microsoft Copilot",
+        use: "Apoyo general para resolver dudas y documentar.",
+        pdfDescription:
+          "Asistente de IA que ayuda a redactar, resumir, idear y convertir notas técnicas en entregables claros.",
+        pdfUse:
+          "Úsalo para crear planes de laboratorio, estructurar reportes, generar listas de pruebas y preparar presentaciones técnicas.",
+        url: "https://copilot.microsoft.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Asistente general para explicación y estudio.",
+        pdfDescription:
+          "Asistente de IA de Google útil para estudiar, preguntar dudas técnicas y convertir temas complejos en explicaciones más claras.",
+        pdfUse:
+          "Úsalo para preparar repasos, crear ejercicios, revisar conceptos y armar guías paso a paso de temas técnicos.",
+        url: "https://gemini.google.com/",
+      },
+      {
+        name: "NotebookLM",
+        use: "Síntesis de PDFs y apuntes técnicos.",
+        pdfDescription:
+          "Cuaderno de investigación para cargar fuentes propias (PDFs y links) y generar resúmenes, explicaciones y conexiones entre temas.",
+        pdfUse:
+          "Úsalo para estudiar con tus apuntes, convertir documentación en resúmenes y preparar una guía de examen basada en tus fuentes.",
+        url: "https://notebooklm.google/",
+      },
+      {
+        name: "Mathpix Snip",
+        use: "Imagen/PDF a LaTeX y notas editables.",
+        pdfDescription:
+          "Herramienta para convertir fórmulas y contenido matemático desde imágenes o PDFs a LaTeX/Markdown de forma rápida.",
+        pdfUse:
+          "Úsalo para pasar apuntes a LaTeX, extraer ecuaciones de PDFs y crear notas limpias para reportes o tareas.",
+        url: "https://website.mathpix.com/snip",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Explicar conceptos, fórmulas y código." },
       { name: "Wolfram Alpha", use: "Cálculo y álgebra." },
       { name: "GitHub Copilot", use: "Programación asistida." },
       { name: "Notion AI", use: "Organizar proyectos y apuntes." },
+      { name: "Claude", use: "Síntesis de documentación técnica." },
+      { name: "Perplexity", use: "Investigar referencias con fuentes." },
+      { name: "Microsoft Copilot", use: "Borradores y documentación." },
+      { name: "Gemini", use: "Estudio y explicación de conceptos." },
+      { name: "NotebookLM", use: "Síntesis basada en tus fuentes." },
+      { name: "Mathpix Snip", use: "OCR de matemáticas a LaTeX." },
     ],
     insight: "En ingeniería, la IA ayuda a calcular, documentar y prototipar más rápido.",
     promptTips: [
@@ -221,12 +342,63 @@ const areas = [
           "Úsalo para escribir briefs, definir nombres, construir storytelling, preparar racionales de diseño y fortalecer presentaciones ante clientes o docentes.",
         url: "https://chatgpt.com/",
       },
+      {
+        name: "DALL·E",
+        use: "Imágenes generativas para conceptos y recursos.",
+        pdfDescription:
+          "Generador de imágenes para crear conceptos visuales, variaciones y recursos gráficos a partir de descripciones.",
+        pdfUse:
+          "Úsalo para ideación visual, crear variantes de estilos y producir recursos para presentaciones o moodboards.",
+        url: "https://openai.com/dall-e",
+      },
+      {
+        name: "Adobe Express",
+        use: "Diseño rápido para piezas y contenido.",
+        pdfDescription:
+          "Herramienta de Adobe para crear piezas visuales y contenido con plantillas, útil para entregar materiales rápidos y consistentes.",
+        pdfUse:
+          "Úsalo para crear portadas, posts, mini-presentaciones y recursos listos para compartir sin empezar desde cero.",
+        url: "https://www.adobe.com/express/",
+      },
+      {
+        name: "Runway",
+        use: "Edición y generación de video con IA.",
+        pdfDescription:
+          "Plataforma creativa para generar y editar video con ayuda de IA, ideal para prototipos audiovisuales y motion rápido.",
+        pdfUse:
+          "Úsalo para crear clips cortos, generar variaciones visuales y prototipar ideas audiovisuales para clase o portafolio.",
+        url: "https://runwayml.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Apoyo en ideación y copy para proyectos.",
+        pdfDescription:
+          "Asistente de IA útil para idear conceptos, escribir copy, estructurar entregables y convertir ideas sueltas en propuestas.",
+        pdfUse:
+          "Úsalo para proponer conceptos, redactar descripciones, preparar presentaciones y generar guiones para prototipos.",
+        url: "https://gemini.google.com/",
+      },
+      {
+        name: "Microsoft Copilot",
+        use: "Borradores, resúmenes y preparación de entregables.",
+        pdfDescription:
+          "Asistente de IA que ayuda a redactar, resumir y estructurar documentos y presentaciones para proyectos creativos.",
+        pdfUse:
+          "Úsalo para organizar un portafolio, preparar texto de presentación, armar guiones y convertir feedback en tareas accionables.",
+        url: "https://copilot.microsoft.com/",
+      },
     ],
     tools: [
       { name: "Figma", use: "Diseño de interfaces y prototipos." },
       { name: "Adobe Firefly", use: "Generación visual e ideas." },
       { name: "Canva", use: "Piezas rápidas y presentaciones." },
       { name: "Midjourney", use: "Exploración conceptual." },
+      { name: "ChatGPT", use: "Briefs, guiones y storytelling." },
+      { name: "DALL·E", use: "Recursos visuales y conceptos." },
+      { name: "Adobe Express", use: "Diseño rápido con plantillas." },
+      { name: "Runway", use: "Video y motion con IA." },
+      { name: "Gemini", use: "Ideación y copy." },
+      { name: "Microsoft Copilot", use: "Estructurar entregables." },
     ],
     insight: "En diseño, usa IA para idear, iterar y presentar conceptos con rapidez.",
     promptTips: [
@@ -296,12 +468,81 @@ const areas = [
           "Úsalo para revisar artículos largos, extraer ideas clave, comparar textos, resumir documentos jurídicos o académicos y reorganizar argumentos.",
         url: "https://claude.ai/",
       },
+      {
+        name: "Consensus",
+        use: "Búsqueda de evidencia en papers (con enfoque académico).",
+        pdfDescription:
+          "Buscador orientado a investigación académica para localizar evidencia en literatura revisada por pares y obtener un panorama rápido del consenso.",
+        pdfUse:
+          "Úsalo para ubicar estudios relevantes, identificar hallazgos clave y armar una base de evidencia antes de escribir conclusiones.",
+        url: "https://consensus.app/",
+      },
+      {
+        name: "Elicit",
+        use: "Síntesis de papers y extracción de hallazgos.",
+        pdfDescription:
+          "Asistente de investigación útil para encontrar papers, extraer datos y sintetizar evidencia para ensayos y proyectos académicos.",
+        pdfUse:
+          "Úsalo para iniciar una revisión rápida de literatura, comparar hallazgos y construir tablas de evidencia para tu trabajo.",
+        url: "https://elicit.com/",
+      },
+      {
+        name: "NotebookLM",
+        use: "Síntesis desde tus fuentes (PDFs, links, docs).",
+        pdfDescription:
+          "Herramienta para trabajar con tus propias fuentes: genera resúmenes, conexiones y guías de estudio basadas en tu material.",
+        pdfUse:
+          "Úsalo para convertir lecturas en fichas, resumir documentos largos y preparar una guía para exponer con tus propias fuentes.",
+        url: "https://notebooklm.google/",
+      },
+      {
+        name: "Grammarly",
+        use: "Claridad, tono y corrección de textos.",
+        pdfDescription:
+          "Asistente de escritura para pulir estilo, claridad y consistencia, útil para ensayos, documentos y comunicaciones formales.",
+        pdfUse:
+          "Úsalo para revisar ensayos, escritos jurídicos y correos; pide ajustes de tono y coherencia antes de entregar.",
+        url: "https://www.grammarly.com/",
+      },
+      {
+        name: "DeepL Write",
+        use: "Reescritura y mejora de redacción (ES/EN).",
+        pdfDescription:
+          "Asistente para reescribir y mejorar tus textos con más claridad y estilo, útil para versiones finales de entregables.",
+        pdfUse:
+          "Úsalo para mejorar redacción, ajustar tono y crear versiones más claras de secciones difíciles sin cambiar tu idea central.",
+        url: "https://www.deepl.com/write",
+      },
+      {
+        name: "Microsoft Copilot",
+        use: "Estructurar y resumir documentos.",
+        pdfDescription:
+          "Asistente de IA para resumir documentos, generar estructuras y preparar borradores de presentaciones o reportes.",
+        pdfUse:
+          "Úsalo para crear un índice, convertir notas en bullets y preparar una presentación a partir de un documento.",
+        url: "https://copilot.microsoft.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Apoyo general para estudio y borradores.",
+        pdfDescription:
+          "Asistente de IA de Google para idear, resumir y estructurar información, útil en tareas de investigación y escritura.",
+        pdfUse:
+          "Úsalo para generar preguntas de repaso, explicar conceptos y proponer estructuras de ensayo o reporte.",
+        url: "https://gemini.google.com/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Redacción y estructuración de ideas." },
       { name: "Grammarly", use: "Corrección de estilo." },
       { name: "Perplexity", use: "Búsqueda y síntesis de fuentes." },
       { name: "Notion AI", use: "Resúmenes y organización." },
+      { name: "Consensus", use: "Evidencia en papers." },
+      { name: "Elicit", use: "Revisión rápida de literatura." },
+      { name: "NotebookLM", use: "Síntesis con tus fuentes." },
+      { name: "DeepL Write", use: "Mejorar redacción." },
+      { name: "Microsoft Copilot", use: "Resumir y estructurar." },
+      { name: "Gemini", use: "Apoyo general de estudio." },
     ],
     insight: "En humanidades, la IA sirve para argumentar mejor, resumir y comparar fuentes.",
     promptTips: [
@@ -363,12 +604,82 @@ const areas = [
           "Úsalo para resumir capítulos, construir fichas de lectura, organizar proyectos creativos y planear entregables.",
         url: "https://www.notion.so/product/ai",
       },
+      {
+        name: "NotebookLM",
+        use: "Síntesis desde tus fuentes (PDFs, links, docs).",
+        pdfDescription:
+          "Herramienta para trabajar con tus propias fuentes: genera resúmenes, conexiones y guías de estudio basadas en tu material.",
+        pdfUse:
+          "Úsalo para convertir lecturas en fichas, preparar guías para exponer y estudiar con material propio.",
+        url: "https://notebooklm.google/",
+      },
+      {
+        name: "DeepL Write",
+        use: "Reescritura y mejora de redacción (ES/EN).",
+        pdfDescription:
+          "Asistente para reescribir y mejorar tu texto con claridad y buen estilo, ideal para entregables finales.",
+        pdfUse:
+          "Úsalo para mejorar redacción, ajustar tono y crear versiones más claras sin cambiar tu intención.",
+        url: "https://www.deepl.com/write",
+      },
+      {
+        name: "Grammarly",
+        use: "Claridad, tono y corrección de textos.",
+        pdfDescription:
+          "Asistente de escritura para pulir estilo, claridad y consistencia en textos académicos y creativos.",
+        pdfUse:
+          "Úsalo para revisar ensayos, guiones y materiales educativos; pide opciones de tono y coherencia.",
+        url: "https://www.grammarly.com/",
+      },
+      {
+        name: "Elicit",
+        use: "Investigación y síntesis de papers.",
+        pdfDescription:
+          "Asistente de investigación para encontrar papers y sintetizar evidencia, útil para proyectos con respaldo académico.",
+        pdfUse:
+          "Úsalo para iniciar una revisión rápida de literatura y sostener tu argumento con evidencia.",
+        url: "https://elicit.com/",
+      },
+      {
+        name: "Canva",
+        use: "Presentaciones, infografías y materiales visuales.",
+        pdfDescription:
+          "Herramienta para crear materiales visuales y presentaciones; útil para comunicar ideas con claridad.",
+        pdfUse:
+          "Úsalo para convertir un ensayo en diapositivas, crear infografías y presentar conceptos complejos de forma visual.",
+        url: "https://www.canva.com/",
+      },
+      {
+        name: "Microsoft Copilot",
+        use: "Borradores y estructuración de entregables.",
+        pdfDescription:
+          "Asistente de IA que ayuda a redactar, resumir y estructurar documentos y presentaciones a partir de tus notas.",
+        pdfUse:
+          "Úsalo para convertir apuntes en guías, armar un índice y preparar una presentación de clase.",
+        url: "https://copilot.microsoft.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Apoyo general para ideación y estudio.",
+        pdfDescription:
+          "Asistente de IA de Google útil para generar ideas, explicar conceptos y ayudarte a estudiar con preguntas y ejemplos.",
+        pdfUse:
+          "Úsalo para generar preguntas de repaso, ejemplos, analogías y estructuras de contenido educativo.",
+        url: "https://gemini.google.com/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Redacción, guiones y estudio." },
       { name: "Claude", use: "Síntesis de textos largos." },
       { name: "Perplexity", use: "Investigación con fuentes." },
       { name: "Notion AI", use: "Notas y organización." },
+      { name: "NotebookLM", use: "Síntesis con tus fuentes." },
+      { name: "DeepL Write", use: "Mejorar redacción." },
+      { name: "Grammarly", use: "Claridad y tono." },
+      { name: "Elicit", use: "Investigación académica." },
+      { name: "Canva", use: "Materiales visuales." },
+      { name: "Microsoft Copilot", use: "Estructurar entregables." },
+      { name: "Gemini", use: "Apoyo general de estudio." },
     ],
     insight: "En humanidades y educación, la IA te ayuda a estudiar, crear y argumentar con mejores fuentes.",
     promptTips: [
@@ -429,12 +740,82 @@ const areas = [
           "Úsalo para estructurar fichas, registrar aprendizaje de casos y planear repasos por temas.",
         url: "https://www.notion.so/product/ai",
       },
+      {
+        name: "Consensus",
+        use: "Búsqueda de evidencia en literatura científica.",
+        pdfDescription:
+          "Buscador académico para explorar evidencia en literatura revisada por pares; útil para tareas basadas en investigación.",
+        pdfUse:
+          "Úsalo para ubicar estudios relevantes, comparar hallazgos y construir una base de evidencia para tus trabajos.",
+        url: "https://consensus.app/",
+      },
+      {
+        name: "Elicit",
+        use: "Síntesis de papers y extracción de hallazgos.",
+        pdfDescription:
+          "Asistente de investigación para encontrar papers y sintetizar evidencia, útil para proyectos en ciencias de la salud.",
+        pdfUse:
+          "Úsalo para iniciar una revisión de literatura, extraer puntos clave y crear tablas de evidencia. Verifica siempre en fuentes oficiales.",
+        url: "https://elicit.com/",
+      },
+      {
+        name: "NotebookLM",
+        use: "Estudio a partir de tus apuntes y PDFs.",
+        pdfDescription:
+          "Herramienta para cargar tus fuentes (apuntes, PDFs y links) y generar resúmenes y guías de estudio basadas en tu material.",
+        pdfUse:
+          "Úsalo para convertir lecturas en fichas, preparar repasos y estudiar con preguntas basadas en tus fuentes.",
+        url: "https://notebooklm.google/",
+      },
+      {
+        name: "Grammarly",
+        use: "Claridad y corrección de textos académicos.",
+        pdfDescription:
+          "Asistente de escritura para mejorar claridad y consistencia en reportes, casos y trabajos académicos.",
+        pdfUse:
+          "Úsalo para pulir reportes, mejorar claridad y ajustar tono. Evita incluir datos sensibles de pacientes.",
+        url: "https://www.grammarly.com/",
+      },
+      {
+        name: "DeepL Write",
+        use: "Reescritura y mejora de redacción (ES/EN).",
+        pdfDescription:
+          "Asistente para reescribir tu texto con mejor claridad y estilo, útil para entregables finales.",
+        pdfUse:
+          "Úsalo para mejorar redacción y tono. Mantén tu información clínica anónima y verifica la terminología.",
+        url: "https://www.deepl.com/write",
+      },
+      {
+        name: "Microsoft Copilot",
+        use: "Borradores y resúmenes de material de estudio.",
+        pdfDescription:
+          "Asistente de IA para resumir, estructurar y convertir notas en guías de estudio y presentaciones.",
+        pdfUse:
+          "Úsalo para crear guías de repaso y estructurar presentaciones. Verifica siempre con bibliografía y guías oficiales.",
+        url: "https://copilot.microsoft.com/",
+      },
+      {
+        name: "Gemini",
+        use: "Apoyo general para estudiar y explicar conceptos.",
+        pdfDescription:
+          "Asistente de IA de Google útil para explicar conceptos, generar preguntas de repaso y crear ejemplos para estudiar.",
+        pdfUse:
+          "Úsalo para practicar con preguntas tipo examen y repasar conceptos. No lo uses para diagnóstico clínico.",
+        url: "https://gemini.google.com/",
+      },
     ],
     tools: [
       { name: "ChatGPT", use: "Repaso, casos simulados y explicación." },
       { name: "Perplexity", use: "Investigación inicial con fuentes." },
       { name: "Claude", use: "Síntesis de lecturas largas." },
       { name: "Notion AI", use: "Organización de estudio." },
+      { name: "Consensus", use: "Evidencia científica." },
+      { name: "Elicit", use: "Síntesis de papers." },
+      { name: "NotebookLM", use: "Estudio con tus fuentes." },
+      { name: "Grammarly", use: "Mejorar redacción." },
+      { name: "DeepL Write", use: "Reescritura de textos." },
+      { name: "Microsoft Copilot", use: "Resúmenes y guías." },
+      { name: "Gemini", use: "Apoyo de estudio." },
     ],
     insight: "En salud, la IA sirve para estudiar mejor; no reemplaza criterio clínico ni fuentes oficiales.",
     promptTips: [
@@ -461,13 +842,6 @@ const selectedTools = document.getElementById("selectedTools");
 const emptyState = document.getElementById("emptyState");
 const insightText = document.getElementById("insightText");
 const dropZone = document.getElementById("dropZone");
-const playerLevel = document.getElementById("playerLevel");
-const playerXP = document.getElementById("playerXP");
-const playerCoins = document.getElementById("playerCoins");
-const playerStreak = document.getElementById("playerStreak");
-const questTitle = document.getElementById("questTitle");
-const questText = document.getElementById("questText");
-const rewardText = document.getElementById("rewardText");
 const rewardBar = document.getElementById("rewardBar");
 const rewardStatus = document.getElementById("rewardStatus");
 const claimReward = document.getElementById("claimReward");
@@ -480,9 +854,6 @@ const selectedTemplate = document.getElementById("selectedTemplate");
 let currentArea = null;
 let currentCareer = "";
 const selectedToolNames = new Set();
-let xp = 0;
-let coins = 0;
-let streak = 0;
 let rewardClaimed = false;
 const creator = {
   name: "Evelyn Salazar Tenango",
@@ -496,7 +867,8 @@ function renderAreas() {
     node.querySelector(".area-icon").textContent = area.icon;
     node.querySelector("strong").textContent = area.title;
     node.querySelector("p").textContent = area.description;
-    node.addEventListener("click", () => selectArea(area));
+    node.dataset.areaId = area.id;
+    node.addEventListener("click", () => selectArea(area, node));
     areaGrid.appendChild(node);
   });
 }
@@ -506,7 +878,7 @@ function renderCareers(area) {
   area.careers.forEach((career) => {
     const chip = careerTemplate.content.firstElementChild.cloneNode(true);
     chip.textContent = career;
-    chip.addEventListener("click", () => selectCareer(career));
+    chip.addEventListener("click", () => selectCareer(career, chip));
     careerChips.appendChild(chip);
   });
 }
@@ -536,7 +908,7 @@ function renderTools(area) {
   });
 }
 
-function selectArea(area) {
+function selectArea(area, areaNode = null) {
   currentArea = area;
   currentCareer = "";
   careerInput.value = "";
@@ -546,40 +918,35 @@ function selectArea(area) {
   gameTitle.textContent = `3. Arrastra herramientas para ${area.title}`;
   gameSubtitle.textContent = area.description;
   insightText.textContent = area.insight;
-  questTitle.textContent = `Misión: arma tu kit de ${area.title}`;
-  questText.textContent = `Consigue 3 herramientas diferentes para desbloquear la recompensa de ${area.title}.`;
-  rewardText.textContent = "PDF bloqueado";
-  rewardStatus.textContent = "Consigue 3 aciertos para descargar tu PDF guía IA.";
+  rewardStatus.textContent = "Consigue 3 herramientas para descargar tu PDF guía IA.";
   claimReward.textContent = "Descargar PDF";
+  document.querySelectorAll(".area-card.is-selected").forEach((node) => node.classList.remove("is-selected"));
+  if (areaNode) areaNode.classList.add("is-selected");
   renderCareers(area);
   renderTools(area);
 }
 
-function selectCareer(career) {
+function selectCareer(career, chipNode = null) {
   currentCareer = career;
   careerInput.value = career;
   insightText.textContent = `Carrera elegida: ${career}. Ahora conecta las herramientas que más te servirán.`;
-  questText.textContent = `Perfecto, ${career}. Completa 3 herramientas para descargar tu PDF guía IA.`;
+  document.querySelectorAll(".career-chip.is-selected").forEach((node) => node.classList.remove("is-selected"));
+  if (chipNode) chipNode.classList.add("is-selected");
 }
 
 function addSelectedTool(tool) {
   if (selectedToolNames.has(tool.name)) return;
   selectedToolNames.add(tool.name);
-  xp += 35;
-  coins += 10;
-  streak += 1;
   const node = selectedTemplate.content.firstElementChild.cloneNode(true);
   node.querySelector("strong").textContent = tool.name;
   node.querySelector("span").textContent = tool.use;
   selectedTools.appendChild(node);
   emptyState.classList.add("hidden");
-  updatePlayerUI();
   updateRewardUI();
   if (selectedToolNames.size >= 3) {
     claimReward.disabled = false;
     claimReward.classList.add("is-ready");
     rewardStatus.textContent = "Ya puedes descargar tu PDF con recomendaciones y tips.";
-    rewardText.textContent = "PDF listo";
     rewardsCard.classList.add("reward-burst");
   } else {
     rewardStatus.textContent = `Lleva ${selectedToolNames.size}/3 herramientas para desbloquear el PDF.`;
@@ -588,6 +955,7 @@ function addSelectedTool(tool) {
 
 careerInput.addEventListener("input", (event) => {
   currentCareer = event.target.value.trim();
+  document.querySelectorAll(".career-chip.is-selected").forEach((node) => node.classList.remove("is-selected"));
   if (currentCareer) {
     insightText.textContent = `Carrera personalizada: ${currentCareer}. Puedes usar las herramientas disponibles para adaptarlas a tu necesidad.`;
   }
@@ -596,13 +964,8 @@ careerInput.addEventListener("input", (event) => {
 claimReward.addEventListener("click", () => {
   if (selectedToolNames.size < 3 || rewardClaimed) return;
   rewardClaimed = true;
-  coins += 25;
-  xp += 50;
-  updatePlayerUI();
   updateRewardUI();
-  const badge = currentArea ? `Guia IA ${currentArea.title}` : "Guia IA";
-  rewardText.textContent = "PDF descargado";
-  rewardStatus.textContent = `Recompensa obtenida: +25 monedas IA y +50 XP. Se descargó tu PDF.`;
+  rewardStatus.textContent = "Listo: se descargó tu PDF.";
   claimReward.textContent = "PDF descargado";
   claimReward.disabled = true;
   claimReward.classList.remove("is-ready");
@@ -1181,14 +1544,6 @@ function downloadPdf(blob) {
   setTimeout(() => URL.revokeObjectURL(url), 1500);
 }
 
-function updatePlayerUI() {
-  const level = Math.floor(xp / 100) + 1;
-  playerLevel.textContent = `Nivel ${level}`;
-  playerXP.textContent = `${xp} XP`;
-  playerCoins.textContent = `${coins}`;
-  playerStreak.textContent = `${streak}`;
-}
-
 function updateRewardUI() {
   const progress = Math.min(100, (selectedToolNames.size / 3) * 100);
   rewardBar.style.width = `${progress}%`;
@@ -1197,5 +1552,4 @@ function updateRewardUI() {
 renderAreas();
 careerPanel.classList.add("hidden");
 gamePanel.classList.add("hidden");
-updatePlayerUI();
 updateRewardUI();
